@@ -10,3 +10,11 @@ set(SQLITECC_SRCS
 
 add_library(sqlitecc ${SQLITECC_SRCS})
 
+install(FILES
+    ../include/sqlitecc/Database.h
+    ../include/sqlitecc/ResultSet.h
+    ../include/sqlitecc/Statement.h
+    DESTINATION include/sqlitecc
+    )
+
+install(TARGETS sqlitecc DESTINATION lib)
